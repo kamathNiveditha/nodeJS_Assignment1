@@ -1,14 +1,27 @@
 let p = new Promise((resolve, reject) => {
-    let b= 2 * 1, c=3;
-    if (b == 2 && c == 3) {
-      resolve("Successful");
+
+    let a = 1 + 1;
+
+    if (a == 2) {
+
+      resolve("Success");
+
     } else {
-      reject("Failure");
+
+      reject("Failed");
+
     }
+
   });
+
   
+
   p.then((message) => {
-    console.log(`This is in the then; state resolved: ${message}`);
+
+    console.log(This is  ${message});
+
   }).catch((message) => {
-    console.log(`This is in the catch; state rejected: ${message}`);
+
+    console.log(This is  ${message});
+
   });
