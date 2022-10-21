@@ -1,25 +1,14 @@
-let p = new Promise((resolve, reject) => {
+const myPromise = new Promise((resolve, reject) => {
 
- 
+  let a = true;
 
-    resolve("Success");
+  setTimeout(() => {
+    return (a) ? resolve('a is present!'): reject(' no a');
+  }, 300);
+}); 
 
- 
-
-    reject("Failed");
-
-  
-
-});
-
+myPromise
+.then(value => { console.log(value) })
+.catch(err => { console.log(err) });
 
 
-p.then((message) => {
-
-  console.log(`This is  ${message}`);
-
-}).catch((message) => {
-
-  console.log(`This is  ${message}`);
-
-});
